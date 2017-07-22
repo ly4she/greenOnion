@@ -1,0 +1,54 @@
+.films
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  flex-direction: column
+  &__item
+    display: none
+    margin: 20px auto
+    font-size: 50px
+    width: 80%
+    position: relative
+  &__itemTemplate
+    display: none
+  &__date
+    background-color: $accent
+    display: inline-block
+    color: #fff
+    padding: 2px 5px
+  &__itemImageBlock
+    position: relative
+    img
+      width: 100%
+  &__durationBlock
+    position: absolute
+    color: #fff
+    left: 5px
+    line-height: 1em
+    background-color: #000
+    border-radius: 50%
+    top: 5px
+    opacity: .7
+  &__ageLimitBlock
+    position: absolute
+    color: #fff
+    right: 5px
+    line-height: 1em
+    background-color: #000
+    border-radius: 50%
+    top: 5px
+    opacity: .7
+  &__sbscrBtnBlock
+    position: absolute
+    bottom: 0
+    width: 100%
+  &__sbscrBtn
+    text-align: center
+    span
+      background-color: #546E7A
+      text-transform: uppercase
+      color: #fff
+      padding: 10px 20px
+      border-radius: 10px
+
+
