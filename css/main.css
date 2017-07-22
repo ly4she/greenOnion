@@ -71,7 +71,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #0077C1;
-  min-height: 10%;
   border-top: 30px solid #42A5F5;
   margin-bottom: 7%;
 }
