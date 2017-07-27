@@ -21,7 +21,7 @@ gulp.task('sass', function() {
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/js/common.js',
+		'app/js/content.js'
 		])
 	.pipe(concat('common.min.js'))
 	//.pipe(uglify())
@@ -30,12 +30,6 @@ gulp.task('common-js', function() {
 
 gulp.task('scripts', ['common-js'], function(){
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/mmenu/js/jquery.mmenu.all.min.js',
-		'app/libs/owl.carousel/dist/owl.carousel.min.js',
-		'app/libs/equalheights/equalheights.js',
-		'app/libs/fotorama-4.6.4/fotorama.js',
-		'app/libs/selectize/dist/js/standalone/selectize.min.js',
 		'app/js/common.min.js' //всегда в конце
 		])
 		.pipe(concat('scripts.min.js'))
@@ -83,7 +77,7 @@ gulp.task('img', function() {
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function(){
 	gulp.watch(['app/sass/**/*.sass', 'app/sass/**/*.scss'], ['css-libs']);
 	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
+	gulp.watch(['libs/**/*.js', 'app/js/common.js', 'app/js/content.js'], ['scripts']);
 });
 
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function(){

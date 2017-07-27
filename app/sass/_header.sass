@@ -1,0 +1,76 @@
+.header
+  display: flex
+  background-color: #42A5F5
+  border-top: 20px solid #0077C1
+  margin-bottom: 20px
+  &__logo
+    margin: 0 auto
+    & h1
+      margin: 0 0
+      color: #1c1c1c
+      font-size: $fz
+      padding: 15px 0
+      font-weight: 100
+  &__menu
+    a
+      font-size: $fz
+      text-decoration: none
+      color: #1c1c1c
+  &__hiddenMenu
+    display: block
+    position: fixed
+    list-style:none
+    padding: 10px
+    margin: 0
+    box-sizing: border-box
+    width: 50%
+    background-color: #eee
+    height: 100%
+    top: 0
+    left: -50%
+    transition: left .2s
+    z-index: 2
+    transform: translateZ(0)
+    backface-visibility: hidden
+  &__menuToggle
+    display: none
+    &:checked
+      &~.header__menuBtn
+        left: 35%
+        & span.header__burgerFirstLine
+          transform: rotate(45deg)
+          top: 10px
+        & span.header__burgerSecondLine
+          opacity: 0
+        & span.header__burgerThirdLine
+          transform: rotate(-45deg)
+          top: -10px
+      &~.header__hiddenMenu
+        left: 0
+  &__menuBtn
+    color: #fff
+    background-color: #fff
+    opacity: 0.7
+    padding: 10px
+    margin-top: 20px
+    border-radius: 50px
+    position: fixed
+    top: 5px
+    left: 12px
+    cursor: pointer
+    transition: left .23s
+    z-index: 3
+    width: 25px
+    transform: translateZ(0)
+    backface-visibility: hidden
+    span
+      display: block
+      height: 3.5px
+      background-color: #1c1c1c
+      margin: 5px 0 0
+      transition: all .1s linear .23s
+      position: relative
+      &.header__burgerFirstLine
+        margin-top: 0
+    
+
